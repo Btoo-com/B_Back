@@ -6,19 +6,23 @@ import lombok.ToString;
 @Getter
 @ToString
 public class User {
-    private String id;
+    private long id;
     private String password;
     private String nickname;
     private long grade;
-    private long Class;
+    private long ban;
     private java.sql.Timestamp join;
+    private long score;
 
-    public User(String id, String password, String nickname,long grade, long Class, java.sql.Timestamp join){
+    public User(long id, String password, String nickname,long grade, long ban, java.sql.Timestamp join,long score){
         this.id=id;
         this.password=password;
         this.nickname=nickname;
         this.grade=grade;
-        this.Class=Class;
+        this.ban=ban;
         this.join=join;
+
+        this.score=score;
+
     }
 }
