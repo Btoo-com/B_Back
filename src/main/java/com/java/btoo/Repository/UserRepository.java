@@ -1,19 +1,16 @@
 package com.java.btoo.Repository;
 
-import com.java.btoo.Domain.User;
-import org.apache.ibatis.annotations.Insert;
+import com.java.btoo.Domain.UserTbl;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Update;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 @Repository
 @Mapper
-public interface UserRepository {
+public interface UserRepository extends JpaRepository<UserTbl,Long> {
 
-    @Insert("insert into User values(#{id},#{password},#{nickname},#{grade},#{ban},#{join},#{score})")
-    void getSignup(User user);
 
-    @Update("update User set score = score+1 where id=#{id}")
-    String ScoreUp(@Param("id")String id);
+    List<UserTbl> findAllByOrderByScoreDesc();
 }

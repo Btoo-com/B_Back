@@ -1,13 +1,13 @@
 package com.java.btoo.Repository;
 
-import com.java.btoo.Domain.GameroomUser;
+import com.java.btoo.Domain.GameroomUserTbl;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
 @Mapper
-public interface GameroomUserRepository {
-    @Insert("insert into Gameroom_user values(#{user_id},#{room_id})")
-    void joinRoom(GameroomUser gameroomUser);
+public interface GameroomUserRepository extends JpaRepository<GameroomUserTbl,Long> {
+
 }
