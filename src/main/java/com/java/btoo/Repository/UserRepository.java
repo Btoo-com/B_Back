@@ -10,7 +10,5 @@ import java.util.List;
 @Repository
 @Mapper
 public interface UserRepository extends JpaRepository<UserTbl,Long> {
-
-
     List<UserTbl> findAllByOrderByScoreDesc();
 }

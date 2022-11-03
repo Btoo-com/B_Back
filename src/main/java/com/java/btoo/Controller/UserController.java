@@ -25,7 +25,7 @@ public class UserController {
         UserTbl value=userRepository.save(user);
         return value;
     }
-    @ResponseBody
+    @ResponseBody//탈퇴하기
     @RequestMapping(value = "/secession", method = RequestMethod.DELETE, produces = "application/json; charset=utf-8")
     public String Secession(@Param("id")Long id)throws Exception{
         userService.delete(id);
@@ -41,7 +41,4 @@ public class UserController {
     public Long getScore(@Param("id")Long id){
         return userService.addScore(id);
     }
-
-
-
 }
