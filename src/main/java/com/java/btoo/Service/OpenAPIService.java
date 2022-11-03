@@ -19,7 +19,6 @@ public class OpenAPIService {
     @Transactional
     public JSONObject getJSON(String search){
         StringBuffer result = new StringBuffer();
-        String jsonresult = null;
         try {
             String apiUrl = "http://opendict.korean.go.kr/api/search?key=40CE4561578F58427CE6A3292B3322C0&req_type=json&q="+search;
             URL url = new URL(apiUrl);

@@ -22,8 +22,7 @@ public class UserController {
     @ResponseBody
     @RequestMapping(value = "/signup", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
     public UserTbl SignUp(UserTbl user)throws Exception{
-        UserTbl value=userRepository.save(user);
-        return value;
+        return userRepository.save(user);
     }
     @ResponseBody//탈퇴하기
     @RequestMapping(value = "/secession", method = RequestMethod.DELETE, produces = "application/json; charset=utf-8")
