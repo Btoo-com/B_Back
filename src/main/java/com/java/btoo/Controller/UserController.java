@@ -47,6 +47,7 @@ public class UserController {
     public List<UserTbl> Rank()throws Exception{
         return userRepository.findAllByOrderByScoreDesc();
     }
+    //ㅁ
     @ResponseBody//우승했을 때 점수추가
     @RequestMapping(value = "/score", method = RequestMethod.PUT, produces = "application/json; charset=utf-8")
     public Long getScore(@Param("id")Long id){
