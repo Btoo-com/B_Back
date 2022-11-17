@@ -25,11 +25,9 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	implementation 'com.google.code.gson:gson:2.9.0'
 	runtimeOnly 'mysql:mysql-connector-java'
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.2'
 	implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
-	implementation 'com.auth0:java-jwt:4.0.0'
 	implementation group: 'javax.xml.bind', name: 'jaxb-api', version: '2.1'
 	implementation 'org.springframework.boot:spring-boot-starter-websocket'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
@@ -38,7 +36,9 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
 	implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
-
+	implementation 'io.jsonwebtoken:jjwt-api:0.11.2'
+	implementation 'io.jsonwebtoken:jjwt-impl:0.11.2'
+	implementation 'io.jsonwebtoken:jjwt-jackson:0.11.2'
 }
 
 tasks.named('test') {
